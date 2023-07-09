@@ -6,8 +6,6 @@ import androidx.compose.ui.test.assertTextEquals
 import androidx.compose.ui.test.junit4.createComposeRule
 import androidx.compose.ui.test.onNodeWithTag
 import com.example.testingdemo.data.UserData
-import com.example.testingdemo.ui.theme.TestingDemoTheme
-import org.junit.Assert.*
 import org.junit.Rule
 import org.junit.Test
 
@@ -24,9 +22,7 @@ class UserCardScreenTest {
       species = "Human"
     )
     composeTestRule.setContent {
-      TestingDemoTheme {
-        UserCardScreen(userData = userData)
-      }
+      UserCardScreen(userData = userData)
     }
 
     composeTestRule.onNodeWithTag("userCardImage")

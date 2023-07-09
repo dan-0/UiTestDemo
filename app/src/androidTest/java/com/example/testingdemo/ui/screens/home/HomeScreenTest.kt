@@ -7,7 +7,6 @@ import androidx.compose.ui.test.filterToOne
 import androidx.compose.ui.test.hasTestTag
 import androidx.compose.ui.test.hasTextExactly
 import androidx.compose.ui.test.junit4.createComposeRule
-import com.example.testingdemo.ui.screens.home.HomeScreen
 import org.junit.Rule
 import org.junit.Test
 

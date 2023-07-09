@@ -16,6 +16,7 @@ import androidx.navigation.compose.rememberNavController
 import com.example.testingdemo.data.userData
 import com.example.testingdemo.ui.screens.home.HomeEvent
 import com.example.testingdemo.ui.screens.home.HomeScreen
+import com.example.testingdemo.ui.screens.interopcard.InteropCardScreen
 import com.example.testingdemo.ui.screens.usercard.UserCardScreen
 import com.example.testingdemo.ui.theme.TestingDemoTheme
 
@@ -44,7 +45,8 @@ class MainActivity : ComponentActivity() {
               UserCardScreen(userData = user)
             }
             composable("iteropusercard") {
-
+              val user = userData.first()
+              InteropCardScreen(user)
             }
             composable("userlist") {
 
