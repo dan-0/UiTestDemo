@@ -13,8 +13,10 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.example.testingdemo.data.userData
 import com.example.testingdemo.ui.screens.home.HomeEvent
 import com.example.testingdemo.ui.screens.home.HomeScreen
+import com.example.testingdemo.ui.screens.usercard.UserCardScreen
 import com.example.testingdemo.ui.theme.TestingDemoTheme
 
 class MainActivity : ComponentActivity() {
@@ -30,15 +32,16 @@ class MainActivity : ComponentActivity() {
             composable("home") {
               HomeScreen {
                 val destination = when (it) {
-                  HomeEvent.GoToInteropUserCard -> "usercard"
-                  HomeEvent.GoToUserCard -> "iteropusercard"
+                  HomeEvent.GoToUserCard -> "usercard"
+                  HomeEvent.GoToInteropUserCard -> "iteropusercard"
                   HomeEvent.GoToUserList -> "userlist"
                 }
                 navController.navigate(destination)
               }
             }
             composable("usercard") {
-
+              val user = userData.first()
+              UserCardScreen(userData = user)
             }
             composable("iteropusercard") {
 
