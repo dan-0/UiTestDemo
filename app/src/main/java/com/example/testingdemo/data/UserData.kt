@@ -45,12 +45,6 @@ val userData = listOf(
     species = "Alien",
   ),
   UserData(
-    userId = 7,
-    userName = "Abradolf Lincler",
-    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/7.jpeg",
-    species = "Human",
-  ),
-  UserData(
     userId = 8,
     userName = "Adjudicator Rick",
     userImageUrl = "https://rickandmortyapi.com/api/character/avatar/8.jpeg",

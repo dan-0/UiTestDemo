@@ -17,9 +17,12 @@ import coil.request.ImageRequest
 import com.example.testingdemo.data.UserData
 
 @Composable
-fun UserCardScreen(userData: UserData) {
+fun UserCardScreen(
+  userData: UserData,
+  modifier: Modifier = Modifier
+) {
   Card(
-    modifier = Modifier.padding(16.dp),
+    modifier = modifier.padding(16.dp),
   ) {
     Column(
       modifier = Modifier.padding(8.dp).fillMaxWidth(),

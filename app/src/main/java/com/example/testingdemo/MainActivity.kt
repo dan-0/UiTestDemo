@@ -18,6 +18,7 @@ import com.example.testingdemo.ui.screens.home.HomeEvent
 import com.example.testingdemo.ui.screens.home.HomeScreen
 import com.example.testingdemo.ui.screens.interopcard.InteropCardScreen
 import com.example.testingdemo.ui.screens.usercard.UserCardScreen
+import com.example.testingdemo.ui.screens.userlist.UserListScreen
 import com.example.testingdemo.ui.theme.TestingDemoTheme
 
 class MainActivity : ComponentActivity() {
@@ -49,9 +50,8 @@ class MainActivity : ComponentActivity() {
               InteropCardScreen(user)
             }
             composable("userlist") {
-
+              UserListScreen(userData = userData)
             }
-
           }
         }
       }
