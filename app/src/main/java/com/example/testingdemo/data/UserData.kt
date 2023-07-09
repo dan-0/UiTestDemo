@@ -1,0 +1,191 @@
+package com.example.testingdemo.data
+
+data class UserData(
+  val userId: Long,
+  val userName: String,
+  val userImageUrl: String,
+  val species: String,
+)
+
+val userData = listOf(
+  UserData(
+    userId = 1,
+    userName = "Rick Sanchez",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/1.jpeg",
+    species = "Human",
+  ),
+  UserData(
+    userId = 2,
+    userName = "Morty Smith",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/2.jpeg",
+    species = "Human",
+  ),
+  UserData(
+    userId = 3,
+    userName = "Summer Smith",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/3.jpeg",
+    species = "Human",
+  ),
+  UserData(
+    userId = 4,
+    userName = "Beth Smith",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/4.jpeg",
+    species = "Human",
+  ),
+  UserData(
+    userId = 5,
+    userName = "Jerry Smith",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/5.jpeg",
+    species = "Human",
+  ),
+  UserData(
+    userId = 6,
+    userName = "Abadango Cluster Princess",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/6.jpeg",
+    species = "Alien",
+  ),
+  UserData(
+    userId = 7,
+    userName = "Abradolf Lincler",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/7.jpeg",
+    species = "Human",
+  ),
+  UserData(
+    userId = 8,
+    userName = "Adjudicator Rick",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/8.jpeg",
+    species = "Human",
+  ),
+  UserData(
+    userId = 9,
+    userName = "Agency Director",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/9.jpeg",
+    species = "Human",
+  ),
+  UserData(
+    userId = 10,
+    userName = "Alan Rails",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/10.jpeg",
+    species = "Human",
+  ),
+  UserData(
+    userId = 11,
+    userName = "Albert Einstein",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/11.jpeg",
+    species = "Human",
+  ),
+  UserData(
+    userId = 12,
+    userName = "Alexander",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/12.jpeg",
+    species = "Human",
+  ),
+  UserData(
+    userId = 13,
+    userName = "Alien Googah",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/13.jpeg",
+    species = "Alien",
+  ),
+  UserData(
+    userId = 14,
+    userName = "Alien Morty",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/14.jpeg",
+    species = "Alien",
+  ),
+  UserData(
+    userId = 15,
+    userName = "Alien Rick",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/15.jpeg",
+    species = "Alien",
+  ),
+  UserData(
+    userId = 16,
+    userName = "Amish Cyborg",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/16.jpeg",
+    species = "Alien",
+  ),
+  UserData(
+    userId = 17,
+    userName = "Annie",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/17.jpeg",
+    species = "Human",
+  ),
+  UserData(
+    userId = 18,
+    userName = "Antenna Morty",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/18.jpeg",
+    species = "Human",
+  ),
+  UserData(
+    userId = 19,
+    userName = "Antenna Rick",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/19.jpeg",
+    species = "Human",
+  ),
+  UserData(
+    userId = 20,
+    userName = "Ants in my Eyes Johnson",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/20.jpeg",
+    species = "Human",
+  ),
+  UserData(
+    userId = 21,
+    userName = "Aqua Morty",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/21.jpeg",
+    species = "Humanoid",
+  ),
+  UserData(
+    userId = 22,
+    userName = "Aqua Rick",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/22.jpeg",
+    species = "Humanoid",
+  ),
+  UserData(
+    userId = 23,
+    userName = "Arcade Alien",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/23.jpeg",
+    species = "Alien",
+  ),
+  UserData(
+    userId = 24,
+    userName = "Armagheadon",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/24.jpeg",
+    species = "Alien",
+  ),
+  UserData(
+    userId = 25,
+    userName = "Armothy",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/25.jpeg",
+    species = "unknown",
+  ),
+  UserData(
+    userId = 26,
+    userName = "Arthricia",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/26.jpeg",
+    species = "Alien",
+  ),
+  UserData(
+    userId = 27,
+    userName = "Artist Morty",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/27.jpeg",
+    species = "Human",
+  ),
+  UserData(
+    userId = 28,
+    userName = "Attila Starwar",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/28.jpeg",
+    species = "Human",
+  ),
+  UserData(
+    userId = 29,
+    userName = "Baby Legs",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/29.jpeg",
+    species = "Human",
+  ),
+  UserData(
+    userId = 30,
+    userName = "Baby Poopybutthole",
+    userImageUrl = "https://rickandmortyapi.com/api/character/avatar/30.jpeg",
+    species = "Poopybutthole",
+  ),
+)
