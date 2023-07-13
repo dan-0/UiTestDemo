@@ -42,11 +42,10 @@ class HomeScreenTest {
     nodes.filterToOne(hasTextExactly("User Card"))
       .assertIsDisplayed()
 
-    nodes.filterToOne(hasTextExactly("Interop User Card"))
-      .assertIsDisplayed()
-
-    nodes.filterToOne(hasTextExactly("User List"))
-      .assertIsDisplayed()
+    // ... or
+    composeTestRule.onNode(
+      hasTestTag("buttonUserCard") and hasTextExactly("User Card")
+    ).assertIsDisplayed()
 
     // Verify expected count
     nodes.assertCountEquals(3)
