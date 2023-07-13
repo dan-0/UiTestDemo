@@ -8,9 +8,11 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material3.RadioButton
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.State
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
@@ -39,11 +41,15 @@ fun UserListScreen(userData: List<UserData>) {
     )
   }
 
+  val lazyListState = rememberLazyListState()
   Column(
     modifier = Modifier.fillMaxSize()
   ) {
     LazyColumn(
-      modifier = Modifier.weight(1f).testTag("userListCards"),
+      modifier = Modifier
+        .weight(1f)
+        .testTag("userListCards"),
+      state = lazyListState,
       verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
       items(sortedData.value, key = { "mykey${it.userId}" }) { userData ->
@@ -55,6 +61,10 @@ fun UserListScreen(userData: List<UserData>) {
     }
     SortBottomBar(sort) { selectedSort ->
       sort.value = selectedSort
+    }
+
+    LaunchedEffect(sort.value) {
+      lazyListState.scrollToItem(0)
     }
   }
 }
