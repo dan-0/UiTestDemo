@@ -33,6 +33,7 @@ class HomeButtonTest {
   @Test
   fun clicked() {
     var result: String? = null
+
     composeTestRule.setContent {
       HomeButton(buttonText = "Hello") {
         result = "Clicked"
