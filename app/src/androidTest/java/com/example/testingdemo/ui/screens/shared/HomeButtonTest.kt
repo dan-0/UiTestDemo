@@ -21,7 +21,6 @@ class HomeButtonTest {
 
     composeTestRule.onNodeWithTag("buttonUserCard")
       .assertIsDisplayed()
-      // Note, this works because of the merged tree
       .assertTextEquals("Hello")
 
     // Note this requires using the unmerged tree
