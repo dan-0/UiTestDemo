@@ -8,7 +8,10 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.semantics.testTagsAsResourceId
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
@@ -22,12 +25,20 @@ import com.example.testingdemo.ui.screens.userlist.UserListScreen
 import com.example.testingdemo.ui.theme.TestingDemoTheme
 
 class MainActivity : ComponentActivity() {
+  @OptIn(ExperimentalComposeUiApi::class)
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
     setContent {
       TestingDemoTheme {
         // A surface container using the 'background' color from the theme
-        Surface(modifier = Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
+        Surface(
+          modifier = Modifier
+            .fillMaxSize()
+            .semantics {
+              testTagsAsResourceId = true
+            },
+          color = MaterialTheme.colorScheme.background
+        ) {
           val navController = rememberNavController()
 
           NavHost(navController = navController, startDestination = "home") {

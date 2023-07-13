@@ -90,4 +90,7 @@ dependencies {
 
     // image loading
     implementation "io.coil-kt:coil-compose:2.4.0"
+
+    // ui automator
+    androidTestImplementation 'androidx.test.uiautomator:uiautomator:2.2.0'
 }

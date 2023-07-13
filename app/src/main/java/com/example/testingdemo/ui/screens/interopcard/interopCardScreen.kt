@@ -34,7 +34,7 @@ fun InteropCardScreen(userData: UserData) {
           .build(),
         contentDescription = "User profile photo for ${userData.userName}",
         modifier = Modifier
-          .heightIn(max = 200.dp)
+          .heightIn(min = 1.dp, max = 200.dp)
           .testTag("userCardImage")
       )
       AndroidViewBinding(factory = UserCardDataBinding::inflate) {
