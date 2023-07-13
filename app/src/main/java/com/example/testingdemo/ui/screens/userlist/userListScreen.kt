@@ -46,10 +46,10 @@ fun UserListScreen(userData: List<UserData>) {
       modifier = Modifier.weight(1f).testTag("userListCards"),
       verticalArrangement = Arrangement.spacedBy(8.dp)
     ) {
-      items(sortedData.value) {
+      items(sortedData.value, key = { "mykey${it.userId}" }) { userData ->
         UserCardScreen(
-          userData = it,
-          modifier = Modifier.semantics { userCardId = it.userId }
+          userData = userData,
+          modifier = Modifier.semantics { userCardId = userData.userId }
         )
       }
     }
