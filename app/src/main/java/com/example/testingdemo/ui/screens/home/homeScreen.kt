@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import com.example.testingdemo.ui.screens.shared.HomeButton
 
 @Composable
@@ -25,6 +26,12 @@ fun HomeScreen(eventHandler: (HomeEvent) -> Unit) {
       eventHandler(HomeEvent.GoToUserList)
     }
   }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun PreviewHomeScreen() {
+  HomeScreen { }
 }
 
 sealed class HomeEvent {

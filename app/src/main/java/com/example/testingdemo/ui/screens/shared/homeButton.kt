@@ -5,6 +5,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.tooling.preview.Preview
 
 @Composable
 fun HomeButton(
@@ -22,4 +23,10 @@ fun HomeButton(
       modifier = Modifier.testTag("buttonTextUserCard")
     )
   }
+}
+
+@Preview
+@Composable
+private fun PreviewHomeButton() {
+  HomeButton(buttonText = "Click me") {}
 }

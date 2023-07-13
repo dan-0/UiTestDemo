@@ -21,8 +21,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.semantics.semantics
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.testingdemo.data.UserData
+import com.example.testingdemo.data.userData
 import com.example.testingdemo.ui.screens.usercard.UserCardScreen
 import com.example.testingdemo.ui.screens.usercard.semantics.userCardId
 
@@ -118,6 +120,14 @@ private fun SortRadioButton(
     Text(radioText)
   }
 }
+
+@Preview(showBackground = true)
+@Composable
+private fun PreviewUserListScreen() {
+  UserListScreen(userData = userData)
+}
+
+
 
 enum class Sort {
   ID, NAME

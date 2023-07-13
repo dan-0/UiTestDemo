@@ -9,11 +9,13 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.testTag
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidViewBinding
 import coil.compose.AsyncImage
 import coil.request.ImageRequest
 import com.example.testingdemo.data.UserData
+import com.example.testingdemo.data.userData
 import com.example.testingdemo.databinding.UserCardDataBinding
 
 @Composable
@@ -41,4 +43,10 @@ fun InteropCardScreen(userData: UserData) {
       }
     }
   }
+}
+
+@Preview(showBackground = true)
+@Composable
+private fun PreviewInteropCardScreen() {
+  InteropCardScreen(userData = userData.first())
 }
